@@ -40,7 +40,8 @@ df = pd.read_csv(path)
 df.head()
 ```
 <h3>Output</h3>
-![image](https://user-images.githubusercontent.com/28058334/190084599-e856815f-ce48-4b16-bed4-02ac0b23695b.png)
+![image](https://user-images.githubusercontent.com/28058334/190089167-e73f36b1-77be-4744-8c32-0c811a1e3f94.png)
+
 
 ```
 result = adfuller(df.Polarity.dropna())
