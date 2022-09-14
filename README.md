@@ -254,18 +254,21 @@ plt.show()
 ![image](https://user-images.githubusercontent.com/28058334/190088066-fa1e587b-8227-4cff-85f0-3db7b901ef0e.png)
 
 <h2>Forecast</h2>
+
 ```
 n_periods = 24
 fc, confint = model.predict(n_periods=n_periods, return_conf_int=True)
 index_of_fc = np.arange(len(df.Polarity), len(df.Polarity)+n_periods)
 ```
 <h2> make series for plotting purpose</h2>
+
 ```
 fc_series = pd.Series(fc, index=index_of_fc)
 lower_series = pd.Series(confint[:, 0], index=index_of_fc)
 upper_series = pd.Series(confint[:, 1], index=index_of_fc)
 ```
 <h2>Plot</h2>
+
 ```
 plt.plot(df.Polarity)
 plt.plot(fc_series, color='darkgreen')
